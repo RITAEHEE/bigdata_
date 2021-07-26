@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <style>
+    span{font-weight:bold; color:red;}
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(function () {
+      $('input[name="pwChk"]').keyup(function () {
+        var pw = $('input[name="pw"]').val();
+        var pwChk = $('input[name="pwChk"]').val();
+        if (pw == pwChk) {
+          $('.result').html('<b>두 비밀번호가 일치합니다</b>');
+        } else {
+          $('.result').html('<span>비밀번호가 일치하지 않습니다</span>');
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <p>ID <input type="text" name="name"/></p>
+  <p>PW <input type="password" name="pw" /></p>
+  <p>PW <input type="password" name="pwChk" /></p>
+  <p class="result"></p>
+</body>
+</html>

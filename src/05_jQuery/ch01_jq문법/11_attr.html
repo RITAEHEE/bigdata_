@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <style>
+    td {width:100px; height:100px; background-color:greenyellow;}
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(function () {
+      // $(선택자).attr('속성명') : 속성값 가져오기
+      // $(선택자).attr('속성명','속성값') : 속성값 수정
+      // ex.  $('img').attr('src','xxx.jpg')
+      $('td').click(function () {
+        var who = $(this).attr('class'); // 속성값 가져오기
+        var WHO = $(this).text(); // 클릭한 태그 사이의 text 가져오기
+        $('.result').text('당신의 선택은 '+ WHO + '(' + who + ')');
+      });
+    });
+  </script>
+</head>
+<body>
+  <table>
+    <tr><td class="kim">KIM</td><td class="lee">LEE</td></tr>
+    <tr><td class="park">PARK</td><td class="choi">CHOI</td></tr>
+  </table>
+  <p class="result">당신의 선택 : </p>
+</body>
+</html>

@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(function () {
+      $('button').click(function () {
+        var id = $('#mId').val().trim();
+        // $.ajax(객체)
+        $.ajax({
+          // url : 요청페이지 경로
+          // type : get/post
+          // data : 요청파라미터 값
+          // dataType : 요청결과 데이터 타입(html:기본값, json)
+          // success : 요청성공시 수행할 콜백함수
+          // error : 요청 실패시 수행할 콜백함수
+          url : 'idConfirm.html',
+          type: 'get',
+          dataType : 'html',
+          data: 'mId=' + id,
+          success: function (data) {
+            $('#result').html(data);
+          },
+          error: function (code) {
+            alert(code.status + code.statusText);
+          },
+        });
+      }); // click 함수
+    });// jQuery 부분
+  </script>
+</head>
+<body>
+  <p>
+    아이디 <input type="text" name="mId" id="mId" />
+    <button>중복확인</button>
+  </p>
+  <span id="result"></span>
+</body>
+</html>

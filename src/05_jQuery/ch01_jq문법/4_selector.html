@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(function () {
+      $('tr:even').css('backgroundColor', '#cccccc');//0번째부터
+      $('tr:odd').css('background-color', '#FFFFAA');
+      $('tr:nth-child(3n)').css('color', 'red');//1번째
+      $('tr:eq(0)').css('background-color',
+        'black').css('color', 'white');
+    });
+  </script>
+</head>
+<body>
+  <table>
+    <tr><th>이름</th><th>혈액형</th><th>지역</th></tr>
+    <tr><td>홍길동</td><td>AB</td><td>서울</td></tr>
+    <tr><td>김길동</td><td>AB</td><td>경기</td></tr>
+    <tr><td>마길동</td><td>O</td><td>마산</td></tr>
+    <tr><td>유길동</td><td>A</td><td>인천</td></tr>
+    <tr><td>홍낄동</td><td>B</td><td>광주</td></tr>
+  </table>
+</body>
+</html>

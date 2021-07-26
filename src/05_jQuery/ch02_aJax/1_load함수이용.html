@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(function () {
+      $('button').click(function () {
+        $('#div1').load('demo_test.txt #p1');
+      });
+    });
+  </script>
+</head>
+<body>
+  <div>#div1 위</div>
+  <div id="div1">
+    <h1>Ajax 첫 예제</h1>
+  </div>
+  <div>#div1 아래</div>
+  <button>외부 내용 가져오기</button>
+</body>
+</html>

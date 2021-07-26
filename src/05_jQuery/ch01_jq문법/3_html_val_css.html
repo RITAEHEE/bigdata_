@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(function () {
+      // $('#msg').text('Hello, jQuery'); #msg안에 text 바꿈
+      //$('#msg').text( $('#msg').text() + 'Hello, jQuery');
+      //$('#msg').html('<h2>Hello, jQuery</h2>'); // #msg안에 html 바꿈
+      $('#msg').html($('#msg').html() + '<h2>Hello</h2>');
+      $('input[name="msg"]').val('Hello, R'); // value를 수정
+      var msg = $('input[type="text"]').val(); // value값 리턴
+      alert(msg);
+      $('input[type=text],input[type=password]').focus(function () {
+        $(this).css('background-color', 'lightyellow').css('color', 'red');
+      });
+
+      $('input[type=text],input[type=password]').blur(function () {
+        $(this).css('backgroundColor', 'white').css('color', 'black');
+      });
+    });
+  </script>
+</head>
+<body>
+  <p id="msg"><b>요기</b></p>
+  <p>메시지 <input type="text" name="msg"/></p>
+  <p>비밀번호 <input type="password" name="pw" /></p>
+  <p>선택 1 <input type="radio" /></p>
+  <p>선택 2 <input type="checkbox" /></p>
+</body>
+</html>
