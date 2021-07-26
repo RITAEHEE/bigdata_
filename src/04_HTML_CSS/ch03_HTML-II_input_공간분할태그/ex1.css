@@ -1,0 +1,7 @@
+﻿#header   {width:350px; margin:0 auto;}
+#join_form{width:350px; margin:0 auto;}
+#join_form b { color: red; }
+h2, td, p {text-align: center;}
+#footer {width:350px; margin:0 auto;
+    border-top:1px solid lightgray;
+}

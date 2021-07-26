@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <style>
+    /* 전체 레이아웃 잡기 */
+    #header, #content, #footer{
+      width:1000px; margin:0 auto;overflow:hidden;
+    }
+    .left, .right{ float:left;
+      background-color:#eeeeee; border:1px solid gray;
+      width:150px; height:150px; 
+    }
+    .center{       float:left;
+      background-color:#eeeeee; border:1px solid gray;
+      width:693px; height:150px;
+    }
+    #content > div{height:300px;}
+
+    /* #content .center */
+    #content .center #nav ul{overflow:hidden;}
+    #content .center #nav ul li{
+      float:left;       list-style:none;
+      font-size:2em;    font-weight:bold;
+      padding:10px 20px;
+    }
+    #content .center #nav ul li a {
+      text-decoration:none; color:black;
+    }
+    #content .center #section{
+      padding:20px; text-align:center;
+    }
+    #content .right ol li:nth-child(9) ~ li{color:purple;}
+    
+    /* border-radius */
+    #header .left, #footer .right{border-radius:30px 0;}
+    #header .center              {border-radius:0 0 30px 30px;}
+    #header .right, #footer .left{border-radius:0 30px;}
+    #content .left               {border-radius:0 30px 30px 0;}
+    #content .center             {border-radius:30px;}
+    #content .right              {border-radius:30px 0 0 30px;}
+    #footer .center              {border-radius:30px 30px 0 0;}
+  </style>
+</head>
+<body>
+  <div id="header">
+    <div class="left"></div>
+    <div class="center"></div>
+    <div class="right"></div>
+  </div>
+  <div id="content">
+    <div class="left"></div>
+    <div class="center">
+      <div id="nav">
+        <ul>
+          <li><a href="#">menu1</a></li>
+          <li><a href="#">menu2</a></li>
+          <li><a href="#">menu3</a></li>
+        </ul>
+      </div>
+      <div id="section">
+        <h2>별 헤는 밤</h2>
+        <p>별이 밤이 이웃 어머니, 아스라히 불러 별 이름자 하늘에는 버리었습니다. 가을 시인의 아침이 이국 경, 다 멀리 북간도에 까닭입니다. 옥 보고, 마디씩 아름다운 그리고 까닭입니다.</p>
+      </div>
+    </div>
+    <div class="right">
+      <ol>
+        <li>태그</li><li>전체(*)</li><li>id, class</li>
+        <li>속성</li><li>후손,자손(>)</li><li>동위</li>
+        <li>반응</li><li>상태</li><li>구조</li>
+        <li>문자</li><li>링크</li><li>부정</li>
+      </ol>
+    </div>
+  </div>
+  <div id="footer">
+    <div class="left"></div>
+    <div class="center"></div>
+    <div class="right"></div>
+  </div>
+</body>
+</html>

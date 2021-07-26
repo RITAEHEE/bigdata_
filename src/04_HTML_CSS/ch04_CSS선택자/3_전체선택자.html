@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <style>
+    /*위에서부터 아래로 차례차례 적용*/
+    * { /* 페이지 초기화 용도 : 전체 페이지 디자인 초기화 */
+        margin:0;  /* 밖여백 0 */
+        padding:0; /* 안여백 0 */
+        color : saddlebrown;
+    }
+    header, nav, section, footer{
+      width:500px; margin:2px auto;
+      border: 1px solid gray;
+    }
+    nav ul { /*수평으로 하고 픈 태그의 부모단*/
+        overflow:hidden;
+    }
+    nav ul li{
+      float:left; /* block타입의 태그를 수평으로 */
+      list-style:none; /* li 앞의 disc 없앰 */
+      padding: 10px 20px; /*10 20 10 20 상우하좌*/
+    }
+    section{clear:both; /* overflow:hidden을 잘 했으면 생략 가능*/
+
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>OO 주식회사</h1>
+  </header>
+  <nav>
+    <ul>
+      <li>회사소개</li><li>서비스소개</li><li>고객센터</li>
+    </ul>
+  </nav>
+  <section>
+    <p>
+      Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+    </p>
+  </section>
+  <footer>
+    <p>서울시 마포구 노고산동 94 그랜드빌딩 7F</p>
+  </footer>
+</body>
+</html>

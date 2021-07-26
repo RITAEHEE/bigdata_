@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <style>
+    input{color:green;}
+    input[type='password']{ /*input 태그 중 type속성이 'password'*/
+      color:black;
+    }
+    input[type^='te']{/*input 태그 중 type속성이 te로 시작:text, tel*/
+      border:1px solid red;
+    }
+    input[name$='me']{/*input태그중 name속성이 me로 끝나는 name*/
+      width:300px;
+    }
+    img[alt] {width:100px;} /*img태그 중 alt속성이 있는 경우*/
+  </style>
+</head>
+<body>
+  <form>
+    이름 <input type="text" name="name" /><br />
+    아뒤 <input type="text" name="id" /><br />
+    비번 <input type="password" name="pw" /><br />
+    전화 <input type="tel" name="tel" /><br />
+    <img src="0618/sulhyun.jpg" />
+    <img src="0618/sulhyun.jpg" alt="설현" />
+    <input type="submit" />
+  </form>
+</body>
+</html>

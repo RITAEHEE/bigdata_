@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <script>
+    function chk() {
+      if (!frm.id.value) {
+        alert('아이디는 필수 입력 사항입니다');
+        frm.id.focus();
+        return false;
+      } else if (!frm.pw.value) {
+        alert('비밀번호는 필수 입력 사항입니다');
+        frm.pw.focus();
+        return false;
+      } else if (frm.pw.value != frm.pwChk.value) {
+        alert('비밀번호를 확인하세요');
+        frm.pw.value = '';
+        frm.pwChk.value = '';
+        frm.pw.focus();
+        return false;
+      }
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <form name="frm" onsubmit="return chk()">
+    <table>
+      <tr>
+        <th>아이디</th>
+        <td><input type="text" name="id" autofocus="autofocus"/></td>
+      </tr>
+      <tr>
+        <th>비밀번호</th>
+        <td><input type="password" name="pw" /></td>
+      </tr>
+      <tr>
+        <th>비밀번호체크</th>
+        <td><input type="password" name="pwChk" /></td>
+      </tr>
+      <tr>
+        <th colspan="2"><input type="submit" value="전송"/></th>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>

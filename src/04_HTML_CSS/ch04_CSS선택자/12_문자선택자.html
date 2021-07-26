@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <style>
+    #wrap {width:800px; margin: 0 auto;}
+    #wrap #header{
+      text-align:center; /* 글씨 가운데 정렬 */
+      border-bottom : 1px solid #cccccc;
+    }
+    #wrap #content p:nth-child(2)::first-line,
+    #wrap #content p:nth-child(3)::first-line{ /*문자선택자*/
+      color:blue; 
+      font-size:20px; /*기본 사이즈가 16px */
+      font-weight:bold;
+    }
+    #wrap #content p:nth-child(2)::first-letter,
+    #wrap #content p:nth-child(3)::first-letter{
+      font-size:2em; /* 원래 나타낼 사이즈의 2배 */
+    }
+    #wrap #content p:nth-child(3)::selection{
+      background-color:violet;
+      color:yellow;
+    }
+    #wrap #footer ul{
+      border-top :1px solid #cccccc;
+      overflow:hidden;
+    }
+    #wrap #footer ul li{
+      float:left;
+      list-style:none;
+      padding:10px;
+      margin: 5px 10px;
+    }
+    #wrap #footer ul li:first-child{
+      padding-top:25px;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <div id="header">
+      <h1>제목이나 회사명</h1>
+    </div>
+    <div id="content">
+      <p>인플레 우려에 전기요금 동결…'연료비 연동제' 유명무실해지나</p>
+      <p>연합뉴스가 연합인포맥스 시스템을 이용해 최근 한달간 증권업계의 2분기 전망치를 분석한 결과, 한전은 연결기준으로 8천770억원의 적자를 낼 것으로 전망됐다. 적자 폭은 증권사별로 최대 1조7천757억원에서 520억원으로 다양했다. 한전은 1분기에는 5천716억원의 영업이익을 냈다.</p>
+      <p>이처럼 '전기요금 합리화'라는 당초 취지와 달리 연료비 연동제가 제대로 작동하지 않으면서 벌써 폐지 가능성도 제기된다. 정부는 2011년에도 연동제를 도입했다가 유가 상승기와 맞물려 시행을 미루다 2014년 폐지한 전례가 있다.이처럼 '전기요금 합리화'라는 당초 취지와 달리 연료비 연동제가 제대로 작동하지 않으면서 벌써 폐지 가능성도 제기된다. 정부는 2011년에도 연동제를 도입했다가 유가 상승기와 맞물려 시행을 미루다 2014년 폐지한 전례가 있다.</p>
+    </div>
+    <div id="footer">
+      <ul>
+        <li><img src="0618/logo.png" alt="로고" /></li>
+        <li><img src="0618/address.png" alt="주소" /></li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
