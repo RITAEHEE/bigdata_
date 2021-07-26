@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <style>
+    *{margin:0 ; padding:0; }
+    div{width:100px; height:100px;}
+    div:nth-child(1){border:0; background-color:yellow;}
+    div:nth-child(2){
+      border:10px solid black;
+      background-color:pink;
+    }
+    div:nth-child(3){
+      border:10px solid blue;
+      /* border가 width영역에 들어감 = width 가 80px로 줄어듬*/
+      box-sizing:border-box; 
+      background-color:skyblue;
+    }
+    div:nth-child(4){
+      border:10px solid red;
+      background-color:yellow;
+      box-sizing:content-box; /* border를 width밖으로(디폴트)*/
+    }
+  </style>
+</head>
+<body>
+  <div>11111</div>
+  <div>22222</div>
+  <div>33333</div>
+  <div>44444</div>
+</body>
+</html>

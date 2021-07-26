@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <style>
+    #wrap{width:700px; margin:0 auto; border:1px solid #cccccc;}
+    #header{height:50px; line-height:50px;
+      background-color: #cccccc;
+    }
+    #contain {
+      height:200px;
+      position:relative; /* 자식단에 position잡으면 부모단도 position*/
+    }
+    #contain #content1{
+      height:180px; width:420px; background-color:red;
+      position:absolute;
+      top:10px; left:10px;
+      z-index:90;
+    }
+    #contain #content2{
+      height:180px; width:320px; background-color:yellow;
+      position:absolute;
+      top:20px; right:10px;
+      z-index:100; /* z-index가 큰 값이 위로*/
+    }
+    #footer{
+      height:50px; line-height:50px;
+      background-color: #cccccc;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <div id="header">HEADER</div>
+    <div id="contain">
+      <div id="content1">CONTENT1(빨간색 왼쪽 부분)</div>
+      <div id="content2">CONTENT2(노란색 오른쪽 부분)</div>
+    </div>
+    <div id="footer">FOTTER</div>
+  </div>
+</body>
+</html>

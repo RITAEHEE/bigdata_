@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <title></title>
+  <style>
+    div{width:100px; height:100px;}
+    div:nth-child(1){background-color:red;
+        position:relative; /*상대좌표*/
+        top:50px; left:50px;
+    }
+    div:nth-child(2){background-color:green;
+        position:relative;
+        z-index:-99999;
+    }
+    div:nth-child(3){background-color:blue;}
+  </style>
+</head>
+<body>
+  <div>111</div><div>222</div><div>333</div>
+</body>
+</html>
